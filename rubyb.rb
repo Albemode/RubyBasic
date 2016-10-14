@@ -36,12 +36,12 @@ def hello_message_with_an_options_hash(name_parts = {})
  "Hello, #{first_name} #{last_name}"
 end
 
-def hello_message_with_keyword_arguments(first_name:, last_name:)
+def hello_message_with_keyword_arguments(first_name, last_name)
   "Hello, #{first_name} #{last_name}"
 end
 
 hello_message_with_an_options_hash(first_name: "Peter", last_name: "Bruke")
-hello_message_with_keyword_arguments(first_name: "Peter", last_name: "Bruke")
+hello_message_with_keyword_arguments("Peter", "Bruke")
 
 
 
@@ -55,27 +55,27 @@ hello_message_with_keyword_arguments(first_name: "Peter", last_name: "Bruke")
 #4)Write a program that prints the numbers from 1 to 100, except:for multiples of three print "Fizz" instead of the number
 																#for multiples of five print "Buzz"
 											   #Print "FizzBuzz" for numbers that are multiples of both 3 and 5.
-	#version1
-(1..100).each do |x|
-	m3 = x.module(3) == 0			#START off with (). each do then use modlue for both 3 and 5
-	m5 = x.module(5) == 0			#After that use m3 and m5 for fizz/buzz then combine for FizzBuzz
+# 	#version1
+# (1..100).each do |x|
+# 	m3 = x.module(3) == 0			#START off with (). each do then use modlue for both 3 and 5
+# 	m5 = x.module(5) == 0			#After that use m3 and m5 for fizz/buzz then combine for FizzBuzz
 		
-			puts case 
-		when (m3 and m5) then
-			'FizzBuzz'
-		when m3 then 'Fizz'
-		when m5 then 'Buzz'
-			else x
-	end	
-end
+# 			puts case 
+# 		when (m3 and m5) then
+# 			'FizzBuzz'
+# 		when m3 then 'Fizz'
+# 		when m5 then 'Buzz'
+# 			else x
+# 	end	
+# end
 
-	#version2
-(1..100).each{|i|					# for this x(variable) with += for 3 and 5
-	x = ''							# writing "FizzBuzz" Not require here
-	x += 'Fizz' if i%3==0
-	x += 'Buzz' if i%5==0
-	puts(x.empty? ? i : x);
-}
+# 	#version2
+# (1..100).each{|i|					# for this x(variable) with += for 3 and 5
+# 	x = ''							# writing "FizzBuzz" Not require here
+# 	x += 'Fizz' if i%3==0
+# 	x += 'Buzz' if i%5==0
+# 	puts(x.empty? ? i : x);
+# }
 
 	#verison3
 1.upto(100) do |i|
